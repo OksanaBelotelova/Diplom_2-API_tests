@@ -3,6 +3,8 @@ class Endpoint:
     LOGIN_USER = 'https://stellarburgers.nomoreparties.site/api/auth/login'
     UPDATE_USER = 'https://stellarburgers.nomoreparties.site/api/auth/user'
     CREATE_ORDER = 'https://stellarburgers.nomoreparties.site/api/orders'
+    GET_ORDER = 'https://stellarburgers.nomoreparties.site/api/orders'
+    DELETE_USER = 'https://stellarburgers.nomoreparties.site/api/auth/user'
 
 class ExistingUser:
     ExistingUser  = {
@@ -42,3 +44,6 @@ class Order:
     wrong_order = {
             "ingredients": ["61c97ya71d1f82001b", "61c0c5a72001bdaaa70", "61c0cga71d1f82001gdaaa72"]
             }
+    
+# class ResponseMessage:
+    

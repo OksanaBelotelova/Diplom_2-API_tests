@@ -19,3 +19,12 @@ class StocksApi:
     @allure.step("Create order")
     def create_order(*args, **kwargs):
         return requests.post(Endpoint.CREATE_ORDER, **kwargs)
+    
+    @allure.step("Get Order")
+    def get_orders(*args,**kwargs):
+        return requests.get(Endpoint.GET_ORDER,**kwargs)
+    
+    @allure.step("Delete User")
+    def delete_user(*args,**kwargs):
+        return requests.delete(Endpoint.DELETE_USER,**kwargs)
+        
