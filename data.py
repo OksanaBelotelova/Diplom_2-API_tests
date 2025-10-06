@@ -45,5 +45,29 @@ class Order:
             "ingredients": ["61c97ya71d1f82001b", "61c0c5a72001bdaaa70", "61c0cga71d1f82001gdaaa72"]
             }
     
-# class ResponseMessage:
+class ResponseMessage:
+    user_already_exist_message = {
+                        "success": False,
+                        "message": "User already exists"
+                        }   
     
+    required_field_is_not_filled_message = {
+                        "success": False,
+                        "message": "Email, password and name are required fields"
+                        }
+    email_or_password_are_incorrect_message = {
+                        "message": "email or password are incorrect", 
+                        "success": False
+                        }
+    email_already_exist_message = {
+                        "success": False,
+                        "message": "User with such email already exists"
+                        }
+    user_should_be_authorised_message = {
+                        "success": False,
+                        "message": "You should be authorised"
+                        }
+    ingredient_must_be_provided = {
+                        "success": False,
+                        "message": "Ingredient ids must be provided"
+                        }
