@@ -8,18 +8,18 @@ class Endpoint:
 
 class ExistingUser:
     ExistingUser  = {
-            "email": "Oksanatest@mail.com",
+            "email": "oksanatest@mail.com",
             "password": "password123",
             "name": "Oksanatest"
             }
     User_with_wrong_password = {
-            "email": "Oksanatest@mail.com",
+            "email": "oksanatest@mail.com",
             "password": "passw123",
             "name": "Oksanatest"
             }
     
     User_with_wrong_email = {
-            "email": "Oksanates@mail.com",
+            "email": "oksanates@mail.com",
             "password": "password123",
             "name": "Oksanatest"
             }
@@ -31,7 +31,7 @@ class ExistingUser:
             }
     
     User_without_password = {
-            "email": "Oksanatest@mail.com",
+            "email": "oksanatest@mail.com",
             "password": "",
             "name": "Oksanatest"
             }

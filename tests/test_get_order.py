@@ -9,9 +9,9 @@ class TestGetOrder:
     def test_get_order_authorized_user(self, login_existing_user):
         user = login_existing_user
         response = StocksApi.get_orders(headers={'Authorization': f'{user['accessToken']}'})
-        
+        print(response.json())
         assert response.status_code == 200
-        assert "orders" in response.json()
+        assert len(response.json()['orders']) > 0
 
 
     @allure.title('Получение заказов конкретного пользователя неавторизованным пользователем')

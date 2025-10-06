@@ -14,7 +14,8 @@ class TestUpdateUser:
         
         assert response.status_code == 200
         assert response.json()["success"] == True
-
+        assert response.json()['user']['email'] == body['email']
+        
 
     @allure.title('Изменение имейла авторизованного пользователя')
     @allure.description('Авторизованный пользователь может изменить имейл')
@@ -25,7 +26,7 @@ class TestUpdateUser:
         
         assert response.status_code == 200
         assert response.json()["success"] == True
-
+        assert response.json()['user']['name'] == body['name'] 
 
     @allure.title('Изменение имейла авторизованного пользователя')
     @allure.description('Авторизованный пользователь не может изменить имейл на уже существующий')

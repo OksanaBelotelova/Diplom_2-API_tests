@@ -13,7 +13,9 @@ class TestCreateUser:
         
         assert response.status_code == 200
         assert response.json()["success"] == True
-    
+        assert response.json()['user']['email'] == body['email']
+        assert response.json()['user']['name'] == body['name']
+
 
     @allure.title('Cоздание пользователя, который уже зарегистрирован')
     @allure.description('При попытке создать пользователя, который уже зарегистрирован, приходит ответ с кодом 403')
@@ -25,7 +27,6 @@ class TestCreateUser:
         assert response.status_code == 403
         assert response.json() == ResponseMessage.user_already_exist_message
         
-
 
     @allure.title('Создание пользователя, с незаполненным email')
     @allure.description('При попытке создать при пользователя с незаполненным email, приходит ответ с кодом 403')

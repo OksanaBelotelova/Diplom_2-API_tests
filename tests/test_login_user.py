@@ -13,6 +13,8 @@ class TestLoginUser:
 
         assert response.status_code == 200
         assert response.json()["success"] == True
+        assert response.json()['user']['email'] == body['email']
+        assert response.json()['user']['name'] == body['name'] 
 
 
     @allure.title('Логин существующего пользователя с неверным паролем')

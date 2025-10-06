@@ -13,6 +13,7 @@ class TestCreateOrder:
         
         assert response.status_code == 200
         assert response.json()["success"] == True
+        assert 'number' in response.json()['order']
         
         
     @allure.title('Создание пустого заказа авторизованным пользователем')
