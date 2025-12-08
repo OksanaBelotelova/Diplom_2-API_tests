@@ -3,11 +3,16 @@ import string
 from data import ExistingUser
 
 class Generate:
-    
+
+    def generate_random_string(self):
+        random_string = ''.join(random.choices(string.ascii_lowercase + string.digits, k=10))
+        return random_string
+
     def generate_random_user(self):
-        username = ''.join(random.choices(string.ascii_lowercase + string.digits, k=10))
+        user = Generate()
+        username = user.generate_random_string()
         email = f'{username}@mail.com'
-        password = ''.join(random.choice('0123456789') for i in range(10))
+        password = user.generate_random_string()
         payload = {
             "email": email,
             "password": password,
@@ -16,8 +21,9 @@ class Generate:
         return payload
     
     def generate_user_without_email(self):
-        username = ''.join(random.choices(string.ascii_lowercase + string.digits, k=10))
-        password = ''.join(random.choice('0123456789') for i in range(10))
+        user = Generate()
+        username = user.generate_random_string()
+        password = user.generate_random_string()
         payload = {
             "email": '',
             "password": password,
@@ -26,9 +32,10 @@ class Generate:
         return payload
     
     def generate_user_without_name(self):
-        username = ''.join(random.choices(string.ascii_lowercase + string.digits, k=10))
+        user = Generate()
+        username = user.generate_random_string()
         email = f'{username}@mail.com'
-        password = ''.join(random.choice('0123456789') for i in range(10))
+        password = user.generate_random_string()
         payload = {
             "email": email,
             "password": password,
@@ -37,7 +44,8 @@ class Generate:
         return payload
     
     def generate_user_without_password(self):
-        username = ''.join(random.choices(string.ascii_lowercase + string.digits, k=10))
+        user = Generate()
+        username = user.generate_random_string()
         email = f'{username}@mail.com'
         payload = {
             "email": email,
@@ -47,7 +55,8 @@ class Generate:
         return payload
     
     def update_user_name(self,email):
-        new_name = ''.join(random.choices(string.ascii_lowercase + string.digits, k=10))
+        user = Generate()
+        new_name = user.generate_random_string()
         payload = {
             "email": email,
             "name": new_name
@@ -55,7 +64,8 @@ class Generate:
         return payload
     
     def update_user_email(self, name):
-        username = ''.join(random.choices(string.ascii_lowercase + string.digits, k=10))
+        user = Generate()
+        username = user.generate_random_string()
         new_email = f'{username}@mail.com'
         payload = {
             "email": new_email,

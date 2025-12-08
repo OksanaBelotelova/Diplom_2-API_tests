@@ -1,10 +1,13 @@
+class URL:
+    base_url = 'https://stellarburgers.nomoreparties.site'
+
 class Endpoint:
-    CREATE_USER = 'https://stellarburgers.nomoreparties.site/api/auth/register'
-    LOGIN_USER = 'https://stellarburgers.nomoreparties.site/api/auth/login'
-    UPDATE_USER = 'https://stellarburgers.nomoreparties.site/api/auth/user'
-    CREATE_ORDER = 'https://stellarburgers.nomoreparties.site/api/orders'
-    GET_ORDER = 'https://stellarburgers.nomoreparties.site/api/orders'
-    DELETE_USER = 'https://stellarburgers.nomoreparties.site/api/auth/user'
+    CREATE_USER = 'api/auth/register'
+    LOGIN_USER = 'api/auth/login'
+    UPDATE_USER = 'api/auth/user'
+    CREATE_ORDER = 'api/orders'
+    GET_ORDER = 'api/orders'
+    DELETE_USER = 'api/auth/user'
 
 class ExistingUser:
     ExistingUser  = {
